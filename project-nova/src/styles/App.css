@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+  }
+  
+  .header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .nav {
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    padding-left: 2rem;
+  }
+  
+  .nav-button {
+    margin-right: 1rem;
+    padding: 1rem 0.5rem;
+    border: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .nav-button.active {
+    color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .content {
+    padding: 2rem;
+  }
+  
+  .badge {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: capitalize;
+  }
+  
+  .badge-pending {
+    background: #fff3cd;
+    color: #856404;
+  }
+  
+  .badge-approved {
+    background: #d4edda;
+    color: #155724;
+  }
+  
+  .badge-rejected {
+    background: #f8d7da;
+    color: #721c24;
+  }
+  
+  .badge-urgent {
+    background: #f8d7da;
+    color: #721c24;
+  }
+  
+  .badge-medium {
+    background: #fff3cd;
+    color: #856404;
+  }
+  
+  .badge-low {
+    background: #d4edda;
+    color: #155724;
+  }
+  
