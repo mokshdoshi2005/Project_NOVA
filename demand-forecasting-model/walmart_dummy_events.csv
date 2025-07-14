@@ -1,0 +1,212 @@
+date,store_id,event_name,event_type,impact_multiplier
+2022-03-17,store_001,SXSW,annual,1.8
+2022-03-18,store_001,SXSW,annual,1.8
+2022-03-19,store_001,SXSW,annual,1.8
+2022-03-20,store_001,SXSW,annual,1.8
+2022-03-21,store_001,SXSW,annual,1.8
+2022-03-22,store_001,SXSW,annual,1.8
+2022-03-23,store_001,SXSW,annual,1.8
+2022-03-24,store_001,SXSW,annual,1.8
+2022-03-25,store_001,SXSW,annual,1.8
+2022-03-26,store_001,SXSW,annual,1.8
+2022-09-15,store_001,Austin City Limits,annual,1.6
+2022-09-16,store_001,Austin City Limits,annual,1.6
+2022-09-17,store_001,Austin City Limits,annual,1.6
+2022-01-15,store_001,UT Football Game,sports,1.3
+2022-01-29,store_001,UT Football Game,sports,1.3
+2022-02-12,store_001,UT Football Game,sports,1.3
+2022-02-26,store_001,UT Football Game,sports,1.3
+2022-03-12,store_001,UT Football Game,sports,1.3
+2022-04-09,store_001,UT Football Game,sports,1.3
+2022-05-07,store_001,UT Football Game,sports,1.3
+2022-05-21,store_001,UT Football Game,sports,1.3
+2022-06-18,store_001,UT Football Game,sports,1.3
+2022-07-02,store_001,UT Football Game,sports,1.3
+2022-07-16,store_001,UT Football Game,sports,1.3
+2022-07-30,store_001,UT Football Game,sports,1.3
+2022-08-27,store_001,UT Football Game,sports,1.3
+2022-10-08,store_001,UT Football Game,sports,1.3
+2022-11-05,store_001,UT Football Game,sports,1.3
+2022-12-03,store_001,UT Football Game,sports,1.3
+2022-12-17,store_001,UT Football Game,sports,1.3
+2022-12-31,store_001,UT Football Game,sports,1.3
+2023-01-14,store_001,UT Football Game,sports,1.3
+2023-01-28,store_001,UT Football Game,sports,1.3
+2023-02-25,store_001,UT Football Game,sports,1.3
+2023-03-11,store_001,UT Football Game,sports,1.3
+2023-04-08,store_001,UT Football Game,sports,1.3
+2023-06-17,store_001,UT Football Game,sports,1.3
+2023-07-01,store_001,UT Football Game,sports,1.3
+2023-07-29,store_001,UT Football Game,sports,1.3
+2023-08-12,store_001,UT Football Game,sports,1.3
+2023-08-26,store_001,UT Football Game,sports,1.3
+2023-09-23,store_001,UT Football Game,sports,1.3
+2023-10-07,store_001,UT Football Game,sports,1.3
+2023-10-21,store_001,UT Football Game,sports,1.3
+2023-11-04,store_001,UT Football Game,sports,1.3
+2023-11-18,store_001,UT Football Game,sports,1.3
+2023-12-02,store_001,UT Football Game,sports,1.3
+2023-12-16,store_001,UT Football Game,sports,1.3
+2022-01-01,store_001,Food Truck Festival,monthly,1.2
+2022-04-01,store_001,Food Truck Festival,monthly,1.2
+2022-05-01,store_001,Food Truck Festival,monthly,1.2
+2022-05-31,store_001,Food Truck Festival,monthly,1.2
+2022-07-30,store_001,Food Truck Festival,monthly,1.2
+2022-08-29,store_001,Food Truck Festival,monthly,1.2
+2022-09-28,store_001,Food Truck Festival,monthly,1.2
+2022-10-28,store_001,Food Truck Festival,monthly,1.2
+2022-11-27,store_001,Food Truck Festival,monthly,1.2
+2022-12-27,store_001,Food Truck Festival,monthly,1.2
+2023-01-26,store_001,Food Truck Festival,monthly,1.2
+2023-02-25,store_001,Food Truck Festival,monthly,1.2
+2023-03-27,store_001,Food Truck Festival,monthly,1.2
+2023-04-26,store_001,Food Truck Festival,monthly,1.2
+2023-05-26,store_001,Food Truck Festival,monthly,1.2
+2023-06-25,store_001,Food Truck Festival,monthly,1.2
+2023-08-24,store_001,Food Truck Festival,monthly,1.2
+2023-09-23,store_001,Food Truck Festival,monthly,1.2
+2023-10-23,store_001,Food Truck Festival,monthly,1.2
+2023-11-22,store_001,Food Truck Festival,monthly,1.2
+2023-12-22,store_001,Food Truck Festival,monthly,1.2
+2022-09-08,store_002,Bumbershoot,annual,1.5
+2022-09-09,store_002,Bumbershoot,annual,1.5
+2022-09-10,store_002,Bumbershoot,annual,1.5
+2022-01-01,store_002,Seahawks Game,sports,1.4
+2022-01-29,store_002,Seahawks Game,sports,1.4
+2022-02-12,store_002,Seahawks Game,sports,1.4
+2022-03-12,store_002,Seahawks Game,sports,1.4
+2022-04-09,store_002,Seahawks Game,sports,1.4
+2022-04-23,store_002,Seahawks Game,sports,1.4
+2022-05-21,store_002,Seahawks Game,sports,1.4
+2022-06-04,store_002,Seahawks Game,sports,1.4
+2022-06-18,store_002,Seahawks Game,sports,1.4
+2022-07-02,store_002,Seahawks Game,sports,1.4
+2022-07-16,store_002,Seahawks Game,sports,1.4
+2022-07-30,store_002,Seahawks Game,sports,1.4
+2022-08-13,store_002,Seahawks Game,sports,1.4
+2022-09-10,store_002,Seahawks Game,sports,1.4
+2022-09-24,store_002,Seahawks Game,sports,1.4
+2022-10-08,store_002,Seahawks Game,sports,1.4
+2022-12-17,store_002,Seahawks Game,sports,1.4
+2022-12-31,store_002,Seahawks Game,sports,1.4
+2023-01-14,store_002,Seahawks Game,sports,1.4
+2023-01-28,store_002,Seahawks Game,sports,1.4
+2023-02-11,store_002,Seahawks Game,sports,1.4
+2023-02-25,store_002,Seahawks Game,sports,1.4
+2023-04-08,store_002,Seahawks Game,sports,1.4
+2023-05-06,store_002,Seahawks Game,sports,1.4
+2023-05-20,store_002,Seahawks Game,sports,1.4
+2023-06-03,store_002,Seahawks Game,sports,1.4
+2023-06-17,store_002,Seahawks Game,sports,1.4
+2023-07-01,store_002,Seahawks Game,sports,1.4
+2023-07-29,store_002,Seahawks Game,sports,1.4
+2023-08-12,store_002,Seahawks Game,sports,1.4
+2023-08-26,store_002,Seahawks Game,sports,1.4
+2023-09-09,store_002,Seahawks Game,sports,1.4
+2023-10-07,store_002,Seahawks Game,sports,1.4
+2023-11-18,store_002,Seahawks Game,sports,1.4
+2023-12-02,store_002,Seahawks Game,sports,1.4
+2022-01-01,store_002,Pike Place Market Festival,monthly,1.2
+2022-01-31,store_002,Pike Place Market Festival,monthly,1.2
+2022-03-02,store_002,Pike Place Market Festival,monthly,1.2
+2022-04-01,store_002,Pike Place Market Festival,monthly,1.2
+2022-05-01,store_002,Pike Place Market Festival,monthly,1.2
+2022-06-30,store_002,Pike Place Market Festival,monthly,1.2
+2022-07-30,store_002,Pike Place Market Festival,monthly,1.2
+2022-08-29,store_002,Pike Place Market Festival,monthly,1.2
+2022-09-28,store_002,Pike Place Market Festival,monthly,1.2
+2022-10-28,store_002,Pike Place Market Festival,monthly,1.2
+2022-12-27,store_002,Pike Place Market Festival,monthly,1.2
+2023-01-26,store_002,Pike Place Market Festival,monthly,1.2
+2023-02-25,store_002,Pike Place Market Festival,monthly,1.2
+2023-03-27,store_002,Pike Place Market Festival,monthly,1.2
+2023-04-26,store_002,Pike Place Market Festival,monthly,1.2
+2023-05-26,store_002,Pike Place Market Festival,monthly,1.2
+2023-06-25,store_002,Pike Place Market Festival,monthly,1.2
+2023-07-25,store_002,Pike Place Market Festival,monthly,1.2
+2023-08-24,store_002,Pike Place Market Festival,monthly,1.2
+2023-09-23,store_002,Pike Place Market Festival,monthly,1.2
+2023-11-22,store_002,Pike Place Market Festival,monthly,1.2
+2023-12-22,store_002,Pike Place Market Festival,monthly,1.2
+2022-01-01,store_002,Tech Conference,monthly,1.1
+2022-01-31,store_002,Tech Conference,monthly,1.1
+2022-03-02,store_002,Tech Conference,monthly,1.1
+2022-04-01,store_002,Tech Conference,monthly,1.1
+2022-05-01,store_002,Tech Conference,monthly,1.1
+2022-05-31,store_002,Tech Conference,monthly,1.1
+2022-07-30,store_002,Tech Conference,monthly,1.1
+2022-08-29,store_002,Tech Conference,monthly,1.1
+2022-09-28,store_002,Tech Conference,monthly,1.1
+2022-12-27,store_002,Tech Conference,monthly,1.1
+2023-01-26,store_002,Tech Conference,monthly,1.1
+2023-02-25,store_002,Tech Conference,monthly,1.1
+2023-03-27,store_002,Tech Conference,monthly,1.1
+2023-04-26,store_002,Tech Conference,monthly,1.1
+2023-05-26,store_002,Tech Conference,monthly,1.1
+2023-06-25,store_002,Tech Conference,monthly,1.1
+2023-09-23,store_002,Tech Conference,monthly,1.1
+2023-10-23,store_002,Tech Conference,monthly,1.1
+2023-12-22,store_002,Tech Conference,monthly,1.1
+2022-12-01,store_003,Art Basel,annual,1.7
+2022-12-02,store_003,Art Basel,annual,1.7
+2022-12-03,store_003,Art Basel,annual,1.7
+2022-12-04,store_003,Art Basel,annual,1.7
+2022-12-05,store_003,Art Basel,annual,1.7
+2022-03-13,store_003,Miami Beach Music Festival,annual,1.5
+2022-03-14,store_003,Miami Beach Music Festival,annual,1.5
+2022-03-15,store_003,Miami Beach Music Festival,annual,1.5
+2022-01-01,store_003,Heat Basketball Game,sports,1.3
+2022-01-15,store_003,Heat Basketball Game,sports,1.3
+2022-02-12,store_003,Heat Basketball Game,sports,1.3
+2022-03-26,store_003,Heat Basketball Game,sports,1.3
+2022-04-23,store_003,Heat Basketball Game,sports,1.3
+2022-05-07,store_003,Heat Basketball Game,sports,1.3
+2022-05-21,store_003,Heat Basketball Game,sports,1.3
+2022-06-04,store_003,Heat Basketball Game,sports,1.3
+2022-07-02,store_003,Heat Basketball Game,sports,1.3
+2022-07-16,store_003,Heat Basketball Game,sports,1.3
+2022-08-13,store_003,Heat Basketball Game,sports,1.3
+2022-08-27,store_003,Heat Basketball Game,sports,1.3
+2022-09-10,store_003,Heat Basketball Game,sports,1.3
+2022-10-22,store_003,Heat Basketball Game,sports,1.3
+2022-11-05,store_003,Heat Basketball Game,sports,1.3
+2022-11-19,store_003,Heat Basketball Game,sports,1.3
+2022-12-03,store_003,Heat Basketball Game,sports,1.3
+2022-12-31,store_003,Heat Basketball Game,sports,1.3
+2023-01-14,store_003,Heat Basketball Game,sports,1.3
+2023-02-25,store_003,Heat Basketball Game,sports,1.3
+2023-03-11,store_003,Heat Basketball Game,sports,1.3
+2023-03-25,store_003,Heat Basketball Game,sports,1.3
+2023-04-08,store_003,Heat Basketball Game,sports,1.3
+2023-04-22,store_003,Heat Basketball Game,sports,1.3
+2023-05-06,store_003,Heat Basketball Game,sports,1.3
+2023-06-17,store_003,Heat Basketball Game,sports,1.3
+2023-07-01,store_003,Heat Basketball Game,sports,1.3
+2023-08-26,store_003,Heat Basketball Game,sports,1.3
+2023-09-09,store_003,Heat Basketball Game,sports,1.3
+2023-10-07,store_003,Heat Basketball Game,sports,1.3
+2023-10-21,store_003,Heat Basketball Game,sports,1.3
+2023-11-04,store_003,Heat Basketball Game,sports,1.3
+2023-12-02,store_003,Heat Basketball Game,sports,1.3
+2023-12-30,store_003,Heat Basketball Game,sports,1.3
+2022-01-01,store_003,Food & Wine Festival,monthly,1.2
+2022-01-31,store_003,Food & Wine Festival,monthly,1.2
+2022-03-02,store_003,Food & Wine Festival,monthly,1.2
+2022-04-01,store_003,Food & Wine Festival,monthly,1.2
+2022-05-01,store_003,Food & Wine Festival,monthly,1.2
+2022-06-30,store_003,Food & Wine Festival,monthly,1.2
+2022-07-30,store_003,Food & Wine Festival,monthly,1.2
+2022-08-29,store_003,Food & Wine Festival,monthly,1.2
+2022-09-28,store_003,Food & Wine Festival,monthly,1.2
+2022-11-27,store_003,Food & Wine Festival,monthly,1.2
+2022-12-27,store_003,Food & Wine Festival,monthly,1.2
+2023-01-26,store_003,Food & Wine Festival,monthly,1.2
+2023-02-25,store_003,Food & Wine Festival,monthly,1.2
+2023-04-26,store_003,Food & Wine Festival,monthly,1.2
+2023-05-26,store_003,Food & Wine Festival,monthly,1.2
+2023-07-25,store_003,Food & Wine Festival,monthly,1.2
+2023-08-24,store_003,Food & Wine Festival,monthly,1.2
+2023-09-23,store_003,Food & Wine Festival,monthly,1.2
+2023-10-23,store_003,Food & Wine Festival,monthly,1.2
+2023-11-22,store_003,Food & Wine Festival,monthly,1.2
+2023-12-22,store_003,Food & Wine Festival,monthly,1.2
