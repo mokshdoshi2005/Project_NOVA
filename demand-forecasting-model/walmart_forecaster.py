@@ -6,6 +6,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_percentage_error, mean_squared_error
 from sklearn.preprocessing import LabelEncoder
 import warnings
+import pickle, os
 warnings.filterwarnings('ignore')
 
 class WalmartDemandForecaster:
@@ -263,7 +264,167 @@ class WalmartDemandForecaster:
             })
         
         return predictions
+    def save_model(self, filepath):
+        """Save the entire forecaster object to a pickle file"""
+        try:
+            # Create directory if it doesn't exist
+            os.makedirs(os.path.dirname(filepath), exist_ok=True)
+            
+            # Save the entire object
+            with open(filepath, 'wb') as f:
+                pickle.dump(self, f)
+            
+            print(f"Model saved successfully to {filepath}")
+            print(f"File size: {os.path.getsize(filepath) / 1024 / 1024:.2f} MB")
+            
+        except Exception as e:
+            print(f"Error saving model: {str(e)}")
     
+    @staticmethod
+    def load_model(filepath):
+        """Load a forecaster object from a pickle file"""
+        try:
+            with open(filepath, 'rb') as f:
+                forecaster = pickle.load(f)
+            
+            print(f"Model loaded successfully from {filepath}")
+            print(f"Loaded {len(forecaster.models)} trained models")
+            
+            return forecaster
+            
+        except Exception as e:
+            print(f"Error loading model: {str(e)}")
+            return None
+    
+    def save_individual_models(self, folder_path):
+        """Save individual models and metadata separately"""
+        try:
+            os.makedirs(folder_path, exist_ok=True)
+            
+            # Save individual models
+            for model_key, model in self.models.items():
+                model_path = os.path.join(folder_path, f"{model_key}_model.pkl")
+                with open(model_path, 'wb') as f:
+                    pickle.dump(model, f)
+            
+            # Save metadata
+            metadata = {
+                'feature_columns': self.feature_columns,
+                'label_encoders': self.label_encoders,
+                'model_performance': self.model_performance
+            }
+            
+            metadata_path = os.path.join(folder_path, 'metadata.pkl')
+            with open(metadata_path, 'wb') as f:
+                pickle.dump(metadata, f)
+            
+            print(f"Individual models saved to {folder_path}")
+            print(f"Saved {len(self.models)} models and metadata")
+            
+        except Exception as e:
+            print(f"Error saving individual models: {str(e)}")
+    
+    def predict_demand(self, store_id, product, forecast_days=7):
+        """Predict demand for next N days"""
+        model_key = f"{store_id}_{product}"
+        
+        if model_key not in self.models:
+            print(f"No model found for {model_key}")
+            return None
+        
+        model = self.models[model_key]
+        
+        # Get latest data for this store-product
+        latest_data = self.processed_df[
+            (self.processed_df['store_id'] == store_id) & 
+            (self.processed_df['product'] == product)
+        ].sort_values('date').tail(30)  # Last 30 days for context
+        
+        if len(latest_data) == 0:
+            print(f"No historical data found for {model_key}")
+            return None
+        
+        predictions = []
+        
+        for day in range(forecast_days):
+            # Create features for prediction day
+            last_row = latest_data.iloc[-1].copy()
+            
+            # Simulate future date
+            future_date = last_row['date'] + timedelta(days=day+1)
+            
+            # Create prediction features
+            pred_features = {}
+            
+            # Time features
+            pred_features['day_of_week'] = future_date.weekday()
+            pred_features['day_of_month'] = future_date.day
+            pred_features['month'] = future_date.month
+            
+            # Weather features (simulate based on season)
+            season = last_row['season']
+            if season == 'winter':
+                pred_features['temperature'] = np.random.normal(65, 10)
+                pred_features['is_rainy'] = np.random.choice([0, 1], p=[0.7, 0.3])
+                pred_features['humidity'] = np.random.normal(60, 10)
+            elif season == 'summer':
+                pred_features['temperature'] = np.random.normal(85, 8)
+                pred_features['is_rainy'] = np.random.choice([0, 1], p=[0.8, 0.2])
+                pred_features['humidity'] = np.random.normal(70, 12)
+            else:  # spring/fall
+                pred_features['temperature'] = np.random.normal(75, 12)
+                pred_features['is_rainy'] = np.random.choice([0, 1], p=[0.75, 0.25])
+                pred_features['humidity'] = np.random.normal(65, 15)
+            
+            pred_features['is_weekend'] = 1 if future_date.weekday() >= 5 else 0
+            pred_features['final_event_impact'] = 1.0  # No special events predicted
+            
+            # Lag features (use recent sales)
+            pred_features['sales_lag_7'] = latest_data.iloc[-7]['sales_quantity'] if len(latest_data) >= 7 else last_row['sales_quantity']
+            pred_features['sales_lag_14'] = latest_data.iloc[-14]['sales_quantity'] if len(latest_data) >= 14 else last_row['sales_quantity']
+            pred_features['sales_lag_30'] = latest_data.iloc[-30]['sales_quantity'] if len(latest_data) >= 30 else last_row['sales_quantity']
+            
+            # Rolling averages
+            pred_features['sales_rolling_7'] = latest_data.tail(7)['sales_quantity'].mean()
+            pred_features['sales_rolling_14'] = latest_data.tail(14)['sales_quantity'].mean()
+            pred_features['sales_rolling_30'] = latest_data.tail(30)['sales_quantity'].mean()
+            
+            # Categorical features
+            pred_features['product_encoded'] = last_row['product_encoded']
+            pred_features['season_encoded'] = last_row['season_encoded']
+            pred_features['store_id_encoded'] = last_row['store_id_encoded']
+            
+            # Create feature vector
+            feature_vector = []
+            for col in self.feature_columns:
+                if col in pred_features:
+                    feature_vector.append(pred_features[col])
+                else:
+                    feature_vector.append(0)  # Default value for missing features
+            
+            X_pred = np.array(feature_vector).reshape(1, -1)
+            
+            # Make prediction
+            pred = model.predict(X_pred)[0]
+            predictions.append({
+                'date': future_date.strftime('%Y-%m-%d'),
+                'predicted_demand': max(0, int(pred)),  # Ensure non-negative
+                'confidence': 'medium'  # Simplified confidence
+            })
+        
+        return predictions
+    
+    
+    def get_model_info(self):
+        """Get basic information about the loaded model"""
+        info = {
+            'total_models': len(self.models),
+            'feature_columns': len(self.feature_columns),
+            'label_encoders': list(self.label_encoders.keys()),
+            'model_keys': list(self.models.keys())
+        }
+        return info
+
     def get_model_summary(self):
         """Get summary of model performance"""
         if not self.model_performance:
